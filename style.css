@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #eef4f8;
+  color: #17324d;
+}
+.game {
+  width: min(1100px, 96vw);
+  margin: 20px auto 40px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
+  text-align: center;
+}
+h1 { margin: 0 0 8px; color: #17658a; }
+.round { font-weight: 700; color: #555; margin-bottom: 8px; }
+#instruction { font-size: 21px; margin: 8px 0 16px; }
+.image-wrap {
+  position: relative;
+  width: min(100%, 900px);
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  line-height: 0;
+}
+#lungImage { width: 100%; height: auto; display: block; }
+
+/* ตำแหน่งอ้างอิงจากภาพที่ผู้ใช้ส่งมา (เปอร์เซ็นต์ของภาพ) */
+.hotspot, .answer-dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.hotspot {
+  width: 72px;
+  height: 72px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  z-index: 5;
+}
+.hotspot:focus { outline: 3px solid rgba(30,120,200,.35); }
+
+/* เฉลยจะไม่ปรากฏก่อนตอบถูก */
+.answer-dot {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #2f72c9;
+  color: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,.28);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+  z-index: 10;
+  display: none;
+  animation: reveal .45s ease-out;
+}
+
+.answer-dot.show { display: block; }
+.answer-dot.pulse { animation: pulse .7s ease-in-out 2; }
+
+@keyframes reveal {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(.2); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes pulse {
+  50% { transform: translate(-50%, -50%) scale(1.18); }
+}
+
+/* จุดบนภาพ: ซ้ายของหน้าจอ = left, ขวาของหน้าจอ = right */
+.p1.left  { left: 27.5%; top: 18.5%; }
+.p1.right { left: 70.5%; top: 18.5%; }
+.p2.left  { left: 33.5%; top: 30.5%; }
+.p2.right { left: 65.5%; top: 30.5%; }
+.p3.left  { left: 20.9%; top: 38.5%; }
+.p3.right { left: 77.5%; top: 38.5%; }
+.p4.left  { left: 17.5%; top: 62.0%; }
+.p4.right { left: 82.0%; top: 62.0%; }
+.p5.left  { left: 20.9%; top: 76.0%; }
+.p5.right { left: 77.5%; top: 76.0%; }
+
+.feedback {
+  min-height: 42px;
+  margin-top: 14px;
+  font-size: 23px;
+  font-weight: 700;
+}
+.feedback.correct { color: #16834b; }
+.feedback.wrong { color: #d33a3a; animation: shake .3s; }
+@keyframes shake {
+  25% { transform: translateX(-7px); }
+  50% { transform: translateX(7px); }
+  75% { transform: translateX(-4px); }
+}
+.progress {
+  color: #667;
+  font-size: 15px;
+  margin-top: 4px;
+}

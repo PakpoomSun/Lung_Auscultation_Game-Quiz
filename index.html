@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lung Auscultation Quiz - Round 1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game">
+  <h1>🫁 Lung Auscultation Quiz</h1>
+  <div class="round">รอบที่ 1: ระบุตำแหน่งการฟังเสียงปอด</div>
+  <p id="instruction">กรุณาคลิกตำแหน่งที่ <strong>1</strong> — เลือกฝั่งใดก็ได้</p>
+
+  <div class="image-wrap" id="lungArea">
+    <img src="images/lung.png" alt="ภาพปอด" id="lungImage">
+
+    <!-- จุดเฉลย: ซ่อนอยู่จนกว่าจะตอบถูก -->
+    <div class="answer-dot left p1" data-point="1">1</div>
+    <div class="answer-dot right p1" data-point="1">1</div>
+    <div class="answer-dot left p2" data-point="2">2</div>
+    <div class="answer-dot right p2" data-point="2">2</div>
+    <div class="answer-dot left p3" data-point="3">3</div>
+    <div class="answer-dot right p3" data-point="3">3</div>
+    <div class="answer-dot left p4" data-point="4">4</div>
+    <div class="answer-dot right p4" data-point="4">4</div>
+    <div class="answer-dot left p5" data-point="5">5</div>
+    <div class="answer-dot right p5" data-point="5">5</div>
+
+    <!-- พื้นที่คลิกที่มองไม่เห็น: ผู้เรียนต้องหาเอง -->
+    <button class="hotspot left p1" data-point="1" aria-label="ตำแหน่ง 1 ซ้าย"></button>
+    <button class="hotspot right p1" data-point="1" aria-label="ตำแหน่ง 1 ขวา"></button>
+    <button class="hotspot left p2" data-point="2" aria-label="ตำแหน่ง 2 ซ้าย"></button>
+    <button class="hotspot right p2" data-point="2" aria-label="ตำแหน่ง 2 ขวา"></button>
+    <button class="hotspot left p3" data-point="3" aria-label="ตำแหน่ง 3 ซ้าย"></button>
+    <button class="hotspot right p3" data-point="3" aria-label="ตำแหน่ง 3 ขวา"></button>
+    <button class="hotspot left p4" data-point="4" aria-label="ตำแหน่ง 4 ซ้าย"></button>
+    <button class="hotspot right p4" data-point="4" aria-label="ตำแหน่ง 4 ขวา"></button>
+    <button class="hotspot left p5" data-point="5" aria-label="ตำแหน่ง 5 ซ้าย"></button>
+    <button class="hotspot right p5" data-point="5" aria-label="ตำแหน่ง 5 ขวา"></button>
+  </div>
+
+  <div id="feedback" class="feedback" aria-live="polite"></div>
+  <div class="progress" id="progress">ตำแหน่งที่เปิดแล้ว: 0 / 5</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
