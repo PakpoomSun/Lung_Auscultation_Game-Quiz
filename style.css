@@ -1,5 +1,189 @@
+   }
 
-/* feedback */
+#instruction {
+  font-size: 21px;
+  margin: 8px 0 16px;
+}
+
+.image-wrap {
+  position: relative;
+  width: min(100%, 900px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  line-height: 0;
+  background: transparent;
+}
+
+#lungImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* จุดคลิก */
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  z-index: 20;
+  padding: 0;
+}
+
+.hotspot:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.hotspot:focus {
+  outline: 3px solid rgba(30, 120, 200, 0.35);
+}
+
+/* จุดเฉลย */
+.answer-dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #2f72c9;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.28);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+  z-index: 30;
+  display: none;
+  pointer-events: none;
+}
+
+.answer-dot.show {
+  display: block;
+}
+
+.round1-dot.p2.left {
+  left: 40.0%;
+  top: 50.5%;
+}
+
+.round1-hotspot.p2.right,
+.round1-dot.p2.right {
+  left: 60.0%;
+  top: 50.5%;
+}
+
+.round1-hotspot.p3.left,
+.round1-dot.p3.left {
+  left: 31.9%;
+  top: 55.0%;
+}
+
+.round1-hotspot.p3.right,
+.round1-dot.p3.right {
+  left: 68.1%;
+  top: 55.0%;
+}
+
+.round1-hotspot.p4.left,
+.round1-dot.p4.left {
+  left: 28.8%;
+  top: 71.0%;
+}
+
+.round1-hotspot.p4.right,
+.round1-dot.p4.right {
+  left: 71.2%;
+  top: 71.0%;
+}
+
+.round1-hotspot.p5.left,
+.round1-dot.p5.left {
+  left: 31.8%;
+  top: 84.0%;
+}
+
+.round1-hotspot.p5.right,
+.round1-dot.p5.right {
+  left: 68.2%;
+  top: 84.0%;
+}
+
+/* =====================================================
+   ROUND 2 — ภาพด้านหลัง
+   ===================================================== */
+
+.round2-hotspot.p1.left,
+.round2-dot.p1.left {
+  left: 24%;
+  top: 12%;
+}
+
+.round2-hotspot.p1.right,
+.round2-dot.p1.right {
+  left: 76%;
+  top: 12%;
+}
+
+.round2-hotspot.p2.left,
+.round2-dot.p2.left {
+  left: 38%;
+  top: 30%;
+}
+
+.round2-hotspot.p2.right,
+.round2-dot.p2.right {
+  left: 59%;
+  top: 30%;
+}
+  top: 54%;
+}
+
+.round2-hotspot.p5.left,
+.round2-dot.p5.left {
+  left: 10%;
+  top: 46%;
+}
+
+.round2-hotspot.p5.right,
+.round2-dot.p5.right {
+  left: 88%;
+  top: 46%;
+}
+
+.round2-hotspot.p6.left,
+.round2-dot.p6.left {
+  left: 21%;
+  top: 54%;
+}
+
+.round2-hotspot.p6.right,
+.round2-dot.p6.right {
+  left: 76%;
+  top: 54%;
+}
+
+.round2-hotspot.p7.left,
+.round2-dot.p7.left {
+  left: 28%;
+  top: 67%;
+}
+
+.round2-hotspot.p7.right,
+.round2-dot.p7.right {
+  left: 72%;
+  top: 67%;
+}
+
+/* =====================================================
+   FEEDBACK / PROGRESS
+   ===================================================== */
+
 .feedback {
   min-height: 42px;
   margin-top: 14px;
@@ -13,13 +197,19 @@
 
 .feedback.wrong {
   color: #d33a3a;
-  animation: shake .3s;
+  animation: shake 0.3s;
 }
 
 @keyframes shake {
-  25% { transform: translateX(-7px); }
-  50% { transform: translateX(7px); }
-  75% { transform: translateX(-4px); }
+  25% {
+    transform: translateX(-7px);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
 }
 
 .progress {
@@ -28,7 +218,11 @@
   margin-top: 4px;
 }
 
-/* กล่องคำอธิบายสะสม */
+
+/* =====================================================
+   คำอธิบายสะสม
+   ===================================================== */
+
 .explanation {
   width: min(900px, 100%);
   margin: 18px auto 0;
@@ -42,7 +236,7 @@
   padding: 12px 16px;
   margin: 10px 0;
   line-height: 1.6;
-  animation: explanationIn .45s ease-out;
+  animation: explanationIn 0.45s ease-out;
 }
 
 .answer-title {
@@ -62,19 +256,22 @@
   }
 }
 
-/* ปุ่มเริ่มรอบ 2 */
+/* =====================================================
+   ปุ่มเริ่มรอบ 2
+   ===================================================== */
+
 .next-round-btn {
   display: none;
   margin: 24px auto 4px;
   padding: 13px 24px;
-  border: none;
+  border: 0;
   border-radius: 12px;
   background: #17658a;
-  color: #fff;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .next-round-btn:hover {
@@ -82,12 +279,22 @@
   transform: translateY(-1px);
 }
 
-/* มือถือ */
-@media (max-width: 600px) {
+/* =====================================================
+   มือถือ
+   ===================================================== */
 
+@media (max-width: 600px) {
   .game {
     width: 98vw;
     padding: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .round {
+    font-size: 16px;
   }
 
   #instruction {
