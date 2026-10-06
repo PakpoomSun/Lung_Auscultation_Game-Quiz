@@ -20,28 +20,11 @@ const roundData = {
     doneInstruction: "🎉 ทำครบทั้ง 5 ตำแหน่งแล้วค่ะ",
     doneMessage: "พร้อมเข้าสู่รอบที่ 2 ซึ่งเป็นการตรวจตำแหน่งการฟังเสียงปอดด้านหลังค่ะ",
     explanations: {
-      1: `
-        <strong>ตำแหน่งที่ 1 (Supra-clavicular)</strong>:
-        เหนือกระดูกไหปลาร้า ฟังเสียงส่วนยอดปอด (Apices)
-      `,
-      2: `
-        <strong>ตำแหน่งที่ 2 (2nd Intercostal Space)</strong>:
-        ช่องซี่โครงที่ 2 ใต้กระดูกไหปลาร้า ฟังกลีบปอดส่วนบน (Upper lobes)
-      `,
-      3: `
-        <strong>ตำแหน่งที่ 3 (4th Intercostal Space)</strong>:
-        ช่องซี่โครงที่ 4 ฟังบริเวณปอดส่วนกลาง
-        (Middle lobe ทางด้านขวา และ Upper lobe ทางด้านซ้าย)
-      `,
-      4: `
-        <strong>ตำแหน่งที่ 4 (Lower anterior)</strong>:
-        บริเวณช่องซี่โครงที่ 5 แนวข้างลำตัว (Mid-axillary line)
-      `,
-      5: `
-        <strong>ตำแหน่งที่ 5 (Mid-axillary)</strong>:
-        บริเวณช่องซี่โครงที่ 6 แนวข้างลำตัว (Mid-axillary line)
-        เพื่อฟังกลีบปอดส่วนล่าง (Lower lobes)
-      `
+      1: `<strong>ตำแหน่งที่ 1 (Supra-clavicular)</strong>: เหนือกระดูกไหปลาร้า ฟังเสียงส่วนยอดปอด (Apices)`,
+      2: `<strong>ตำแหน่งที่ 2 (2nd Intercostal Space)</strong>: ช่องซี่โครงที่ 2 ใต้กระดูกไหปลาร้า ฟังกลีบปอดส่วนบน (Upper lobes)`,
+      3: `<strong>ตำแหน่งที่ 3 (4th Intercostal Space)</strong>: ช่องซี่โครงที่ 4 ฟังบริเวณปอดส่วนกลาง (Middle lobe ทางด้านขวา และ Upper lobe ทางด้านซ้าย)`,
+      4: `<strong>ตำแหน่งที่ 4 (Lower anterior)</strong>: บริเวณช่องซี่โครงที่ 5 แนวข้างลำตัว (Mid-axillary line)`,
+      5: `<strong>ตำแหน่งที่ 5 (Mid-axillary)</strong>: บริเวณช่องซี่โครงที่ 6 แนวข้างลำตัว (Mid-axillary line) เพื่อฟังกลีบปอดส่วนล่าง (Lower lobes)`
     }
   },
 
@@ -53,38 +36,17 @@ const roundData = {
     doneInstruction: "🎉 ทำครบทั้ง 7 ตำแหน่งแล้วค่ะ",
     doneMessage: "ยอดเยี่ยมค่ะ! รอบที่ 2 เสร็จสมบูรณ์แล้ว",
     explanations: {
-      1: `
-        <strong>ตำแหน่งที่ 1 (Apex / เหนือสะบัก)</strong>:
-        บริเวณเหนือกระดูกสะบัก ใช้ฟังเสียงบริเวณยอดปอด (Apices) ทั้งซ้ายและขวา
-      `,
-      2: `
-        <strong>ตำแหน่งที่ 2 (ระหว่างสะบักกับกระดูกสันหลัง ระดับบน)</strong>:
-        บริเวณระหว่างสะบักกับแนวกระดูกสันหลังส่วนบน ใช้ประเมินเสียงบริเวณกลีบปอดส่วนบน (Upper lobes)
-      `,
-      3: `
-        <strong>ตำแหน่งที่ 3 (ระหว่างสะบักกับกระดูกสันหลัง ระดับกลาง)</strong>:
-        บริเวณระหว่างสะบักกับแนวกระดูกสันหลังระดับกลาง ใช้ประเมินเสียงบริเวณปอดส่วนกลาง
-      `,
-      4: `
-        <strong>ตำแหน่งที่ 4 (กึ่งกลางหลังระดับล่าง)</strong>:
-        บริเวณกึ่งกลางหลังระดับล่าง เป็นตำแหน่งสำหรับประเมินเสียงปอดส่วนล่าง
-      `,
-      5: `
-        <strong>ตำแหน่งที่ 5 (Axillary / Mid-axillary)</strong>:
-        บริเวณข้างลำตัวใต้รักแร้
-        ด้านขวาสัมพันธ์กับบริเวณ Right Middle Lobe และด้านซ้ายสัมพันธ์กับ Left Upper Lobe/Lingula
-      `,
-      6: `
-        <strong>ตำแหน่งที่ 6 (Infrascapular)</strong>:
-        บริเวณใต้กระดูกสะบัก ใช้ประเมินเสียงบริเวณกลีบปอดส่วนล่าง (Lower lobes)
-      `,
-      7: `
-        <strong>ตำแหน่งที่ 7 (ฐานปอดส่วนล่างสุด)</strong>:
-        บริเวณฐานปอดส่วนล่างสุด ใช้ประเมินเสียงปอดบริเวณ Lung bases
-      `
+      1: `<strong>ตำแหน่งที่ 1 (Apex / เหนือสะบัก)</strong>: บริเวณเหนือกระดูกสะบัก ใช้ฟังเสียงบริเวณยอดปอด (Apices) ทั้งซ้ายและขวา`,
+      2: `<strong>ตำแหน่งที่ 2 (ระหว่างสะบักกับกระดูกสันหลัง ระดับบน)</strong>: บริเวณระหว่างสะบักกับแนวกระดูกสันหลังส่วนบน ใช้ประเมินเสียงบริเวณกลีบปอดส่วนบน (Upper lobes)`,
+      3: `<strong>ตำแหน่งที่ 3 (ระหว่างสะบักกับกระดูกสันหลัง ระดับกลาง)</strong>: บริเวณระหว่างสะบักกับแนวกระดูกสันหลังระดับกลาง ใช้ประเมินเสียงบริเวณปอดส่วนกลาง`,
+      4: `<strong>ตำแหน่งที่ 4 (กึ่งกลางหลังระดับล่าง)</strong>: บริเวณกึ่งกลางหลังระดับล่าง เป็นตำแหน่งสำหรับประเมินเสียงปอดส่วนล่าง`,
+      5: `<strong>ตำแหน่งที่ 5 (Axillary / Mid-axillary)</strong>: บริเวณข้างลำตัวใต้รักแร้ ด้านขวาสัมพันธ์กับบริเวณ Right Middle Lobe และด้านซ้ายสัมพันธ์กับ Left Upper Lobe/Lingula`,
+      6: `<strong>ตำแหน่งที่ 6 (Infrascapular)</strong>: บริเวณใต้กระดูกสะบัก ใช้ประเมินเสียงบริเวณกลีบปอดส่วนล่าง (Lower lobes)`,
+      7: `<strong>ตำแหน่งที่ 7 (ฐานปอดส่วนล่างสุด)</strong>: บริเวณฐานปอดส่วนล่างสุด ใช้ประเมินเสียงปอดบริเวณ Lung bases`
     }
   }
 };
+
 
 function setRound(roundNumber) {
   currentRound = roundNumber;
@@ -94,44 +56,38 @@ function setRound(roundNumber) {
   const data = roundData[currentRound];
 
   lungImage.src = data.image;
-  lungImage.alt = currentRound === 1
-    ? "ภาพปอดด้านหน้า"
-    : "ภาพปอดด้านหลัง";
+  lungImage.alt = currentRound === 1 ? "ภาพปอดด้านหน้า" : "ภาพปอดด้านหลัง";
 
   lungArea.classList.remove("round1", "round2");
   lungArea.classList.add(`round${currentRound}`);
 
   roundTitle.textContent = data.title;
-
   instruction.innerHTML = data.firstInstruction;
   feedback.textContent = "";
   feedback.className = "feedback";
 
-  progress.textContent =
-    `ตำแหน่งที่เปิดแล้ว: 0 / ${data.total}`;
-
+  progress.textContent = `ตำแหน่งที่เปิดแล้ว: 0 / ${data.total}`;
   explanation.innerHTML = "";
 
   document.querySelectorAll(".answer-dot").forEach(dot => {
     dot.classList.remove("show", "pulse");
   });
 
-// เปิดให้คลิกเฉพาะจุดของรอบที่กำลังเล่น
-document.querySelectorAll(".round1-hotspot").forEach(hotspot => {
-  const active = currentRound === 1;
+  // แสดงและเปิดคลิกเฉพาะ hotspot ของรอบปัจจุบัน
+  document.querySelectorAll(".round1-hotspot").forEach(hotspot => {
+    const active = currentRound === 1;
+    hotspot.style.display = active ? "block" : "none";
+    hotspot.style.pointerEvents = active ? "auto" : "none";
+  });
 
-  hotspot.style.display = active ? "block" : "none";
-  hotspot.style.pointerEvents = active ? "auto" : "none";
-});
+  document.querySelectorAll(".round2-hotspot").forEach(hotspot => {
+    const active = currentRound === 2;
+    hotspot.style.display = active ? "block" : "none";
+    hotspot.style.pointerEvents = active ? "auto" : "none";
+  });
 
-document.querySelectorAll(".round2-hotspot").forEach(hotspot => {
-  const active = currentRound === 2;
-
-  hotspot.style.display = active ? "block" : "none";
-  hotspot.style.pointerEvents = active ? "auto" : "none";
-});
-
-startRound2.style.display = "none";
+  // ปุ่มเริ่มรอบ 2 แสดงเฉพาะเมื่อจบรอบ 1
+  startRound2.style.display = "none";
 }
 
 function handleClick(hotspot) {
@@ -140,35 +96,29 @@ function handleClick(hotspot) {
   const clickedPoint = Number(hotspot.dataset.point);
   const data = roundData[currentRound];
 
-  // =========================
   // ตอบผิด
-  // =========================
   if (clickedPoint !== currentPoint) {
     feedback.textContent = "❌ ผิดค่ะ ลองใหม่อีกครั้งนะคะ";
     feedback.className = "feedback wrong";
     return;
   }
 
-  // =========================
   // ตอบถูก
-  // =========================
   locked = true;
 
-  feedback.textContent =
-    `✅ ถูกต้องค่ะ! ฟังที่ตำแหน่งนี้ของปอดทั้ง 2 ฝั่งค่ะ`;
+  feedback.textContent = "✅ ถูกต้องค่ะ! ฟังที่ตำแหน่งนี้ของปอดทั้ง 2 ฝั่งค่ะ";
   feedback.className = "feedback correct";
 
-  // แสดงหมายเลขเฉลยทั้งซ้ายและขวา
+  // แสดงหมายเลขเฉลยทั้งซ้ายและขวาของตำแหน่งปัจจุบัน
   document
     .querySelectorAll(`.round${currentRound}-dot[data-point="${currentPoint}"]`)
     .forEach(dot => {
       dot.classList.add("show", "pulse");
     });
 
-  // เพิ่มคำอธิบายและเก็บสะสมไว้
+  // เพิ่มคำอธิบายแบบสะสม
   const answerBox = document.createElement("div");
   answerBox.className = "explanation-item";
-
   answerBox.innerHTML = `
     <div class="answer-title">📍 เฉลยตำแหน่งที่ ${currentPoint}</div>
     <div>${data.explanations[currentPoint]}</div>
@@ -176,14 +126,9 @@ function handleClick(hotspot) {
 
   explanation.appendChild(answerBox);
 
-  progress.textContent =
-    `ตำแหน่งที่เปิดแล้ว: ${currentPoint} / ${data.total}`;
+  progress.textContent = `ตำแหน่งที่เปิดแล้ว: ${currentPoint} / ${data.total}`;
 
-  // =========================
-  // ไปตำแหน่งต่อไป
-  // =========================
   if (currentPoint < data.total) {
-
     currentPoint++;
 
     setTimeout(() => {
@@ -196,44 +141,31 @@ function handleClick(hotspot) {
     }, 900);
 
   } else {
-
-    // =========================
-    // จบรอบ
-    // =========================
     setTimeout(() => {
-
       instruction.innerHTML = data.doneInstruction;
-
       feedback.textContent = data.doneMessage;
       feedback.className = "feedback correct";
-
       locked = true;
 
       if (currentRound === 1) {
         startRound2.style.display = "inline-block";
       }
-
     }, 900);
   }
 }
 
-// ผูกปุ่มทั้งหมด
+// ผูกปุ่ม hotspot
 document.querySelectorAll(".hotspot").forEach(hotspot => {
-
   hotspot.addEventListener("click", () => {
-
-    // ถ้าจุดนี้ถูกซ่อนไว้ ไม่ต้องทำอะไร
     if (hotspot.style.display === "none") return;
 
     const hotspotRound =
       hotspot.classList.contains("round2-hotspot") ? 2 : 1;
 
-    // ต้องเป็นจุดของรอบปัจจุบันเท่านั้น
     if (hotspotRound !== currentRound) return;
 
     handleClick(hotspot);
   });
-
 });
 
 // เริ่มรอบที่ 2
