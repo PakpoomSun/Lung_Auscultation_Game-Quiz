@@ -3,47 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lung Auscultation Quiz - Round 1</title>
+<title>Lung Auscultation Quiz - Round 1 & 2</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <div class="game">
+
   <h1>🫁 Lung Auscultation Quiz</h1>
-  <div class="round">รอบที่ 1: ระบุตำแหน่งการฟังเสียงปอด</div>
-  <p id="instruction">กรุณาคลิกตำแหน่งที่ <strong>1</strong> — เลือกฝั่งใดก็ได้</p>
+
+  <div class="round" id="roundTitle">
+    รอบที่ 1: ระบุตำแหน่งการฟังเสียงปอดด้านหน้า
+  </div>
+
+  <p id="instruction">
+    กรุณาคลิกตำแหน่งที่ <strong>1</strong> — เลือกฝั่งใดก็ได้
+  </p>
 
   <div class="image-wrap" id="lungArea">
-    <img src="Lung.png" alt="ภาพปอด" id="lungImage">
 
-    <!-- จุดเฉลย: ซ่อนอยู่จนกว่าจะตอบถูก -->
-    <div class="answer-dot left p1" data-point="1">1</div>
-    <div class="answer-dot right p1" data-point="1">1</div>
-    <div class="answer-dot left p2" data-point="2">2</div>
-    <div class="answer-dot right p2" data-point="2">2</div>
-    <div class="answer-dot left p3" data-point="3">3</div>
-    <div class="answer-dot right p3" data-point="3">3</div>
-    <div class="answer-dot left p4" data-point="4">4</div>
-    <div class="answer-dot right p4" data-point="4">4</div>
-    <div class="answer-dot left p5" data-point="5">5</div>
-    <div class="answer-dot right p5" data-point="5">5</div>
+    <img src="Lung.png" alt="ภาพปอดด้านหน้า" id="lungImage">
 
-    <!-- พื้นที่คลิกที่มองไม่เห็น: ผู้เรียนต้องหาเอง -->
-    <button class="hotspot left p1" data-point="1" aria-label="ตำแหน่ง 1 ซ้าย"></button>
-    <button class="hotspot right p1" data-point="1" aria-label="ตำแหน่ง 1 ขวา"></button>
-    <button class="hotspot left p2" data-point="2" aria-label="ตำแหน่ง 2 ซ้าย"></button>
-    <button class="hotspot right p2" data-point="2" aria-label="ตำแหน่ง 2 ขวา"></button>
-    <button class="hotspot left p3" data-point="3" aria-label="ตำแหน่ง 3 ซ้าย"></button>
-    <button class="hotspot right p3" data-point="3" aria-label="ตำแหน่ง 3 ขวา"></button>
-    <button class="hotspot left p4" data-point="4" aria-label="ตำแหน่ง 4 ซ้าย"></button>
-    <button class="hotspot right p4" data-point="4" aria-label="ตำแหน่ง 4 ขวา"></button>
-    <button class="hotspot left p5" data-point="5" aria-label="ตำแหน่ง 5 ซ้าย"></button>
-    <button class="hotspot right p5" data-point="5" aria-label="ตำแหน่ง 5 ขวา"></button>
+    <!-- =========================
+         เฉลย Round 1: 5 ตำแหน่ง
+         ========================= -->
+    <div class="answer-dot round1-dot left p1" data-point="1">1</div>
+    <div class="answer-dot round1-dot right p1" data-point="1">1</div>
+
+    <div class="answer-dot round1-dot left p2" data-point="2">2</div>
+    <div class="answer-dot round1-dot right p2" data-point="2">2</div>
+
+    <div class="answer-dot round1-dot left p3" data-point="3">3</div>
+    <div class="answer-dot round1-dot right p3" data-point="3">3</div>
+
+    <div class="answer-dot round1-dot left p4" data-point="4">4</div>
+    <div class="answer-dot round1-dot right p4" data-point="4">4</div>
+
+    <div class="answer-dot round1-dot left p5" data-point="5">5</div>
+    <div class="answer-dot round1-dot right p5" data-point="5">5</div>
+
+    <!-- จุดคลิก Round 1 -->
+    <button class="hotspot round1-hotspot left p1" data-point="1" aria-label="ตำแหน่ง 1 ซ้าย"></button>
+    <button class="hotspot round1-hotspot right p1" data-point="1" aria-label="ตำแหน่ง 1 ขวา"></button>
+
+    <button class="hotspot round1-hotspot left p2" data-point="2" aria-label="ตำแหน่ง 2 ซ้าย"></button>
+    <button class="hotspot round1-hotspot right p2" data-point="2" aria-label="ตำแหน่ง 2 ขวา"></button>
+
+    <button class="hotspot round1-hotspot left p3" data-point="3" aria-label="ตำแหน่ง 3 ซ้าย"></button>
+    <button class="hotspot round1-hotspot right p3" data-point="3" aria-label="ตำแหน่ง 3 ขวา"></button>
+
+    <button class="hotspot round1-hotspot left p4" data-point="4" aria-label="ตำแหน่ง 4 ซ้าย"></button>
+    <button class="hotspot round1-hotspot right p4" data-point="4" aria-label="ตำแหน่ง 4 ขวา"></button>
+
+    <button class="hotspot round1-hotspot left p5" data-point="5" aria-label="ตำแหน่ง 5 ซ้าย"></button>
+    <button class="hotspot round1-hotspot right p5" data-point="5" aria-label="ตำแหน่ง 5 ขวา"></button>
+
+    <!-- =========================
+         เฉลย Round 2: 7 ตำแหน่ง
+         ========================= -->
+    <div class="answer-dot round2-dot left p1" data-point="1">1</div>
+    <div class="answer-dot round2-dot right p1" data-point="1">1</div>
+
+    <div class="answer-dot round2-dot left p2" data-point="2">2</div>
+    <div class="answer-dot round2-dot right p2" data-point="2">2</div>
+
+    <div class="answer-dot round2-dot left p3" data-point="3">3</div>
+    <div class="answer-dot round2-dot right p3" data-point="3">3</div>
+
+    <div class="answer-dot round2-dot left p4" data-point="4">4</div>
+    <div class="answer-dot round2-dot right p4" data-point="4">4</div>
+
+    <div class="answer-dot round2-dot left p5" data-point="5">5</div>
+    <div class="answer-dot round2-dot right p5" data-point="5">5</div>
+
+    <div class="answer-dot round2-dot left p6" data-point="6">6</div>
+    <div class="answer-dot round2-dot right p6" data-point="6">6</div>
+
+    <div class="answer-dot round2-dot left p7" data-point="7">7</div>
+    <div class="answer-dot round2-dot right p7" data-point="7">7</div>
+
+    <!-- จุดคลิก Round 2 -->
+    <button class="hotspot round2-hotspot left p1" data-point="1" aria-label="ตำแหน่ง 1 ซ้าย"></button>
+    <button class="hotspot round2-hotspot right p1" data-point="1" aria-label="ตำแหน่ง 1 ขวา"></button>
+
+    <button class="hotspot round2-hotspot left p2" data-point="2" aria-label="ตำแหน่ง 2 ซ้าย"></button>
+    <button class="hotspot round2-hotspot right p2" data-point="2" aria-label="ตำแหน่ง 2 ขวา"></button>
+
+    <button class="hotspot round2-hotspot left p3" data-point="3" aria-label="ตำแหน่ง 3 ซ้าย"></button>
+    <button class="hotspot round2-hotspot right p3" data-point="3" aria-label="ตำแหน่ง 3 ขวา"></button>
+
+    <button class="hotspot round2-hotspot left p4" data-point="4" aria-label="ตำแหน่ง 4 ซ้าย"></button>
+    <button class="hotspot round2-hotspot right p4" data-point="4" aria-label="ตำแหน่ง 4 ขวา"></button>
+
+    <button class="hotspot round2-hotspot left p5" data-point="5" aria-label="ตำแหน่ง 5 ซ้าย"></button>
+    <button class="hotspot round2-hotspot right p5" data-point="5" aria-label="ตำแหน่ง 5 ขวา"></button>
+
+    <button class="hotspot round2-hotspot left p6" data-point="6" aria-label="ตำแหน่ง 6 ซ้าย"></button>
+    <button class="hotspot round2-hotspot right p6" data-point="6" aria-label="ตำแหน่ง 6 ขวา"></button>
+
+    <button class="hotspot round2-hotspot left p7" data-point="7" aria-label="ตำแหน่ง 7 ซ้าย"></button>
+    <button class="hotspot round2-hotspot right p7" data-point="7" aria-label="ตำแหน่ง 7 ขวา"></button>
+
   </div>
 
   <div id="feedback" class="feedback" aria-live="polite"></div>
+
+  <div class="progress" id="progress">
+    ตำแหน่งที่เปิดแล้ว: 0 / 5
+  </div>
+
   <div id="explanation" class="explanation"></div>
-  <div class="progress" id="progress">ตำแหน่งที่เปิดแล้ว: 0 / 5</div>
+
+  <button id="startRound2" class="next-round-btn">
+    ▶ เริ่มรอบที่ 2: การตรวจการฟังเสียงปอดด้านหลัง
+  </button>
+
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
