@@ -116,13 +116,22 @@ function setRound(roundNumber) {
     dot.classList.remove("show", "pulse");
   });
 
-  document.querySelectorAll(".hotspot").forEach(hotspot => {
-    hotspot.disabled = false;
-    hotspot.style.pointerEvents = "auto";
-  });
+// เปิดให้คลิกเฉพาะจุดของรอบที่กำลังเล่น
+document.querySelectorAll(".round1-hotspot").forEach(hotspot => {
+  const active = currentRound === 1;
 
-  startRound2.style.display = currentRound === 1 ? "none" : "none";
-}
+  hotspot.style.display = active ? "block" : "none";
+  hotspot.style.pointerEvents = active ? "auto" : "none";
+});
+
+document.querySelectorAll(".round2-hotspot").forEach(hotspot => {
+  const active = currentRound === 2;
+
+  hotspot.style.display = active ? "block" : "none";
+  hotspot.style.pointerEvents = active ? "auto" : "none";
+});
+
+startRound2.style.display = "none";
 
 function handleClick(hotspot) {
   if (locked) return;
@@ -209,15 +218,21 @@ function handleClick(hotspot) {
 
 // ผูกปุ่มทั้งหมด
 document.querySelectorAll(".hotspot").forEach(hotspot => {
+
   hotspot.addEventListener("click", () => {
+
+    // ถ้าจุดนี้ถูกซ่อนไว้ ไม่ต้องทำอะไร
+    if (hotspot.style.display === "none") return;
+
     const hotspotRound =
       hotspot.classList.contains("round2-hotspot") ? 2 : 1;
 
-    // ไม่ให้จุดของอีกรอบทำงาน
+    // ต้องเป็นจุดของรอบปัจจุบันเท่านั้น
     if (hotspotRound !== currentRound) return;
 
     handleClick(hotspot);
   });
+
 });
 
 // เริ่มรอบที่ 2
