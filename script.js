@@ -132,6 +132,7 @@ document.querySelectorAll(".round2-hotspot").forEach(hotspot => {
 });
 
 startRound2.style.display = "none";
+}
 
 function handleClick(hotspot) {
   if (locked) return;
